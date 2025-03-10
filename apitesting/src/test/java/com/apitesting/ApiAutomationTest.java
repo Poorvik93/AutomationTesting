@@ -6,12 +6,12 @@ import io.restassured.response.Response;
 
 public class ApiAutomationTest {
 
-	 // Define the base URL and endpoint
-	public static String baseUrl = "https://reqres.in";
+	 // Define the base URL and endpoin
+	
+    public static String baseUrl = "https://reqres.in";
     public static String endpoint = "/api/users";
     public static String URL  = baseUrl + endpoint;
 
-    // Entry point of the program
     public static void main(String[] args) {
         ApiAutomationTest test = new ApiAutomationTest();
         test.performGetRequestAndValidate(URL);
@@ -25,7 +25,6 @@ public class ApiAutomationTest {
             Response response = sendGetRequest(url); 
             validateResponse(response);              
         } catch (Exception e) {
-            // Logs exception for debugging and troubleshooting
             System.out.println("Test Failed: An exception occurred!");
             e.printStackTrace(); 
         }
@@ -36,8 +35,6 @@ public class ApiAutomationTest {
      */
     private Response sendGetRequest(String url) {
         System.out.println("Sending GET request to URL: " + url);
-
-        // Best Practice: Add logging, headers, or authentication if needed
         return RestAssured.get(url); 
     }
 
