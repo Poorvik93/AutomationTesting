@@ -7,10 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
-/**
- * Page Object Model for the Login Page of SauceDemo.
- * Provides methods to interact with login functionality and handle error states.
- */
+
 public class LoginPage extends BasePage {
 
     // Locators
@@ -21,8 +18,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Constructor for LoginPage.
-     *
-     * @param driver WebDriver instance passed from test class
      */
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -30,8 +25,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Enter username into username field.
-     *
-     * @param username Username to be entered
      */
     public void enterUsername(String username) {
         try {
@@ -47,7 +40,6 @@ public class LoginPage extends BasePage {
     /**
      * Enter password into password field.
      *
-     * @param password Password to be entered
      */
     public void enterPassword(String password) {
         try {
@@ -62,8 +54,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Click the login button and return a ProductPage object if successful.
-     *
-     * @return ProductPage instance if login button is clicked, null otherwise.
      */
     public ProductPage clickLoginButton() {
         try {
@@ -80,10 +70,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Performs the login action: enters username and password, then clicks the login button.
-     *
-     * @param username Username
-     * @param password Password
-     * @return ProductPage object if login succeeds, otherwise null
      */
     public ProductPage login(String username, String password) {
         enterUsername(username);
@@ -93,8 +79,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Check if login failed by verifying the presence of an error message.
-     *
-     * @return true if error message is displayed, false otherwise
      */
     public boolean isLoginFailed() {
         try {
@@ -113,8 +97,6 @@ public class LoginPage extends BasePage {
 
     /**
      * Gets the login error message text.
-     *
-     * @return String error message if available, otherwise a default message
      */
     public String getLoginErrorMessage() {
         try {
