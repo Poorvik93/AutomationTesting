@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-/**
- * This class represents the Product Page of the web application.
- */
+
 public class ProductPage extends BasePage {
 
     // Locators for web elements on the Product page
@@ -24,7 +22,6 @@ public class ProductPage extends BasePage {
 
     /**
      * Constructor to initialize the ProductPage with WebDriver.
-     * @param driver WebDriver instance passed from test or base class.
      */
     public ProductPage(WebDriver driver) {
         super(driver);
@@ -40,7 +37,6 @@ public class ProductPage extends BasePage {
 
     /**
      * Returns the title of the current page.
-     * @return page title as String.
      */
     public String getPageTitle() {
         String title = driver.getTitle();
@@ -59,7 +55,6 @@ public class ProductPage extends BasePage {
 
     /**
      * Gets the name of the first product listed on the page.
-     * @return first product name as String.
      */
     public String getFirstProductName() {
         return getText(productNames);
@@ -67,7 +62,6 @@ public class ProductPage extends BasePage {
 
     /**
      * Gets the price of the first product listed on the page.
-     * @return first product price as String.
      */
     public String getFirstProductPrice() {
         return getText(productPrices);
@@ -116,7 +110,6 @@ public class ProductPage extends BasePage {
 
     /**
      * Verifies whether the first product is present in the cart.
-     * @return true if the product is found in the cart, false otherwise.
      */
     public boolean isProductInCart() {
         // Get product name before clicking on cart
