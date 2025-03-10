@@ -23,9 +23,6 @@ public class BasePage {
 
     /**
      * Waits for the element to be visible and returns it.
-     *
-     * @param locator By locator of the element
-     * @return WebElement once visible
      */
     protected WebElement find(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -33,8 +30,6 @@ public class BasePage {
 
     /**
      * Clicks on the element after waiting for it to be clickable.
-     *
-     * @param locator By locator of the element
      */
     protected void click(By locator) {
         try {
@@ -74,7 +69,6 @@ public class BasePage {
 
     /**
      * Returns the current page title.
-     *
      */
     public String getPageTitle() {
         try {
@@ -87,7 +81,6 @@ public class BasePage {
 
     /**
      * Returns the current URL of the page.
-     *
      */
     public String getCurrentUrl() {
         try {
